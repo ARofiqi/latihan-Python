@@ -37,4 +37,15 @@ print(hasil)
 # print("\n========= matriks 3x3 =========")
 # [print(f"|{i[0]}  {i[1]}  {i[2]}|") for i in matriks_3x3]
 
-print("hey" < "hay")
+i = 0
+
+x = 0
+
+while i < 4:
+
+    x+=i
+
+    i+=1
+
+print(x)
+
