@@ -12,9 +12,8 @@ mhs = {
            },
        }
 
+
+
 i = 0
-print("no  nama \t\t nim \t\t\t\t prodi \t\t\t kelas")
-for n in mhs:
-    i+=1
-    print("{}. {} \t ({}) \t {} \t {}".format(i,n,mhs[n]["nim"],mhs[n]["jurusan"],mhs[n]["kelas"]))
-    
+for index,nama in enumerate(mhs):
+    print(f"{index+1} {nama} {mhs[nama]['nim']} {mhs[nama]['jurusan']} {mhs[nama]['kelas']}")

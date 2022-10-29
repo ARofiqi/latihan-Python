@@ -67,10 +67,10 @@ print("-"*10,"Latihan Perulangan","-"*10)
 #     print("*"*(d*2-1))
 #     if d > p:break
 
-# p = 5
-# d = 0 # Dummy variable
-# print("\n========== 8 ==========")
-# while True:
-#     print("*"*p)
-#     p -= 1
-#     if p == 0:break
+p = 5
+d = 0 # Dummy variable
+print("\n========== 8 ==========")
+while True:
+    print("*"*p)
+    p -= 1
+    if p == 0:break

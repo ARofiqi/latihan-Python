@@ -1,5 +1,5 @@
 # Latihan List
-# Program list buku
+# Program daftar buku
 data_buku = []
 
 add = input("Tambah buku (y/n): ")
