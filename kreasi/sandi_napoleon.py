@@ -1,54 +1,30 @@
-kalimat = "Tolong Aku Disekap dadiracun"
+pesan = input("Masukan Kalimat : ").upper()
+l = int(input("Mau berapa hurup per kata : "))
 
-box = []
-for i in kalimat:
-    if i == ' ':continue
-    box.append(i)
+def r_space(kalimat):
+    return kalimat.replace(" ","")
 
+def potong(text):
+    hasil = []
+    w = []
+    lebar = l
+    for i,t in enumerate(text):
+        if i % lebar == 0 and i != 0:
+            hasil.append(w)
+            w = []
+        w.append(t)
+    hasil.append(w)
+    return hasil
 
-w = len(box)
-# k = 0
-# print("w =",w)
-# # for i in range(w):
-# #     if i**2 == w:
-# #         k = i**2
-# #         break
-# #     elif i**2 < w:
-# #         w -= 1
-# #     else:
-# #         w += 1
-# i = 0
-# while True:
-#     if i**2 == w:
-#         k = i**2
-#         break
-#     elif i**2 < w:
-#         w -= 1
-#     else:
-#         w += 1
-#     i += 1
-
-# print("K =",k)
-
-for i in range(w):
-    if (i + 1)**2 == w:
-        lebar = i + 1
-
-hasil = []
-l = int(len(box)/lebar)
-
-for i in range(l):
-    sub_box = []
-    x = l*i
-    y = l*(i+1)
-    for i in range(x,y):
-        sub_box.append(box[i])
-    hasil.append(sub_box)
-
-for index,i in enumerate(hasil):
-    if index % 2 != 0: i.reverse()
-
-for i in hasil:
-    for j in i:
-        print(j,end=(''))
-    print(" ",end=(""))
+def see_sandi():
+    y = potong(r_space(pesan))
+    print("Sandinya adalah ",end=(""))
+    for index,item in enumerate(y):
+        if index % 2 == 0:
+            [print(j,end=("")) for j in item]
+        else:
+            item.reverse()
+            [print(j,end=("")) for j in item]
+        print(" ",end=(""))
+                
+see_sandi()
