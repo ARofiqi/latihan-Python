@@ -11,5 +11,4 @@ def pasw():
     for i in range(jml):
         print(random.choice(abjad)+random.choice(simbol)+random.choice(number),end=(""))     
 
-
 pasw()
