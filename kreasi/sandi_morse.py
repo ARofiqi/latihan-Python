@@ -37,5 +37,6 @@ def see_pass():
             print("/",end=(""))
             continue
         print(morse[t],end=("/"))
+    print("//")
 
 see_pass()
