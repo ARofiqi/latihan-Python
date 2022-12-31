@@ -1,42 +1,46 @@
 from pytube import YouTube
 import wx
 import demo
-import sys
 
 class myapp(demo.myapp):
     def __init__(self,parent):
         demo.myapp.__init__(self,parent)
     
     def download(self, event):
-            yt = YouTube(self.link.GetValue())
             id = self.res.GetValue()
+            yt = YouTube(self.link.GetValue(),on_progress_callback=progress_down)
 
-            
-            
             if id == '1':id = 160
             elif id == '2':id = 18
             elif id == '3':id = 22
+
+            global load
+            global size
+            load = self.loading
+            size = yt.streams.get_by_itag(id).filesize
+            def progress_down(chunk,bytes_remaining):
+                    current = ((size - bytes_remaining)/size)
+                    load.SetValue(current)
+                    print(size)
+            
             self.info.SetValue("")
+            load.SetRange(size)
             try:
                 yt.streams.get_by_itag(id).download(r"D:\video-youtube")
+                load.SetValue(size)
+
                 self.info.SetValue("Sukses")
             except:
                 self.info.SetValue("Tidak Sukses")
 
-def show_progress_bar(stream, _chunk, _file_handle, bytes_remaining):
-  current = ((stream.filesize - bytes_remaining)/stream.filesize)
-  percent = ('{0:.1f}').format(current*100)
-  progress = int(50*current)
-  status = '█' * progress + '-' * (50 - progress)
-  sys.stdout.write(' ↳ |{bar}| {percent}%\r'.format(bar=status, percent=percent))
-  sys.stdout.flush()
+
 
 app = wx.App(False)
 frame = myapp(None)
 frame.Show(True)
 app.MainLoop()
 
-# while True: a
+# while True:
 #     system("cls")
 #     try:
 #         print("PROGRAM MENDOWNLOAD VIDEO YOUTUBE")
