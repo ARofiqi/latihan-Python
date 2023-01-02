@@ -1,7 +1,9 @@
-pesan = input("Masukan Pesan : ").upper()
-
-def see_pass():
-    morse = {
+def morse(text="") -> str:
+    """
+    Program Untuk Menghasilkan kode morse dari text
+    """
+    pasw = ""
+    key = {
         "A":".-",
         "B":"-...",
         "C":"-.-.",
@@ -28,15 +30,47 @@ def see_pass():
         "X":"-..-",
         "Y":"-.--",
         "Z":"--..",
-        " ":"/"
+        " ":"/",
+        "1":".----",
+        "2":"..---",
+        "3":"...--",
+        "4":"....-",
+        "5":".....",
+        "6":"-....",
+        "7":"--...",
+        "8":"---..",
+        "9":"----.",
+        "0":"-----",
+        ".":".-.-.-",
+        ",":"--..--",
+        "?":"..--..",
+        "!":"-.-.--",
+        "'":".----.",
+        '"':".-..-.",
+        "(":"-.--.",
+        ")":"-.--.-",
+        "&":".-...",
+        ":":"---...",
+        ";":"-.-.-.",
+        "/":"-..-.",
+        "_":"..--.-",
+        "=":"-...-",
+        "+":".-.-.",
+        "-":"-....-",
+        "$":"...-..-",
+        "@":".--.-.",
     }
+    try:
+        for t in str(text):
+            if t == " ":
+                pasw += "/"
+                continue
+            pasw += key[t]+"/" 
+        pasw += "/"
+    except:
+        print("ERROR")
+    return pasw
 
-    print("your pass : ",end=(""))
-    for t in pesan:
-        if t == " ":
-            print("/",end=(""))
-            continue
-        print(morse[t],end=("/"))
-    print("//")
-
-see_pass()
+pesan = input("Masukan Pesan : ").upper()
+mypasw = morse(pesan)
+print("sandi morse = \n"+mypasw)
