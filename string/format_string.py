@@ -17,6 +17,7 @@ format_str = f"Bilangan bulat : {angka}"
 # bilangan ribuan dengan ordo ribuan
 angka = 1000000000
 format_str = f"Bilangan ribuan : {angka:,}"
+print(format_str)
 
 # bilangan decimal
 angka = 2005.58374234

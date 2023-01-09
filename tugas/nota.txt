@@ -1,0 +1,7 @@
+
+Nota Pemesanan : 
+-Jus Alpukat     Jumlah : 5 	Rp.14,000 x 5
+-Jus Jeruk       Jumlah : 7 	Rp.12,000 x 7
+Uang        : Rp.900,000
+Harga Total : Rp.154,000
+Kembalian   : Rp.746,000
