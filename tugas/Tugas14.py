@@ -73,4 +73,3 @@ Uang        : Rp.{uang:,}
 Harga Total : Rp.{harga_total:,}
 Kembalian   : Rp.{uang-harga_total:,}
 """)
-    
