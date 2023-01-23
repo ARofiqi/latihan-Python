@@ -1,30 +1,22 @@
-pesan = input("Masukan Kalimat : ").upper()
-l = int(input("Mau berapa hurup per kata : "))
+pesan = input("Masukan Kalimat : ")
 
-def r_space(kalimat):
-    return kalimat.replace(" ","")
-
-def potong(text):
-    hasil = []
-    w = []
-    lebar = l
-    for i,t in enumerate(text):
-        if i % lebar == 0 and i != 0:
-            hasil.append(w)
-            w = []
-        w.append(t)
-    hasil.append(w)
+def see_sandi(kalimat):
+    x = list(filter(lambda x: x!=" ",kalimat))
+    potongan_kata = []
+    awal = 0
+    akhir = 5
+    total_huruf = (len(x)//5)+1
+    for i in range(total_huruf):
+        kata = x[awal:akhir]
+        if i%2 != 0:kata.reverse()
+        potongan_kata.append(kata)
+        awal += 5
+        akhir += 5
+    hasil = ""
+    for i in potongan_kata:
+        hasil = hasil + "".join(i)+"\n"
     return hasil
 
-def see_sandi():
-    y = potong(r_space(pesan))
-    print("Sandinya adalah ",end=(""))
-    for index,item in enumerate(y):
-        if index % 2 == 0:
-            [print(j,end=("")) for j in item]
-        else:
-            item.reverse()
-            [print(j,end=("")) for j in item]
-        print(" ",end=(""))
-                
-see_sandi()
+
+sandi = see_sandi(pesan)
+print(sandi)
