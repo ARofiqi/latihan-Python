@@ -1,4 +1,4 @@
-buah = ["mangga","jeruk","durian","semangka","anggur"]
+buah = ["mangga", "jeruk", "durian", "semangka", "anggur"]
 
 # menampilkan isi list sesuai dengan nilai index -- list[]
 print("Buah ke-index[2] : {}".format(buah[2]))
@@ -9,10 +9,10 @@ print("Total semuah buah : {} buah".format(len(buah)))
 # menampikan semua isi list dengan perulangan
 for b in buah:
     print("- buah {}".format(b))
-    
+
 # mengganti nilai list
 print("buah pertama : buah {}".format(buah[0]))
-buah[0]="Apel"
+buah[0] = "Apel"
 print("diganti dengan : buah {}".format(buah[0]))
 
 # prepend(item), menambahkan item dari depan
@@ -31,7 +31,8 @@ print(buah)
 
 # del --> menghapus list sesuai indexnya syntax del list[index]
 print("\nlist buah awal :{}".format(buah))
-print("menghapus list ke-2-index dengan del jadi yang akan hilang yaitu {}".format(buah[2]))
+print(
+    "menghapus list ke-2-index dengan del jadi yang akan hilang yaitu {}".format(buah[2]))
 del buah[2]
 print("list buah akhir : {}".format(buah))
 
@@ -50,24 +51,16 @@ print("list buah yang telah dipotong : {}".format(buah[1:4]))
 # operasi pada list
 
 # penggabungan (+) --> untuk menggabungkan list
-hewan = ["kucing","anjing","sapi","Kambing"] 
-ikan = ["nila","mujair","cod","salmon"]
+hewan = ["kucing", "anjing", "sapi", "Kambing"]
+ikan = ["nila", "mujair", "cod", "salmon"]
 makhluk_hidup = hewan + ikan
 
-print("\nlist hewan         :",hewan)
-print("list ikan          :",ikan)
-print("list makhluk hidup :",makhluk_hidup)
+print("\nlist hewan         :", hewan)
+print("list ikan          :", ikan)
+print("list makhluk hidup :", makhluk_hidup)
 
 # perkalian (*)    --> untuk menduplikasi list
-sapa = ["halo","hai"]
+sapa = ["halo", "hai"]
 ulang = 4
-print("\nlist sapa : {}\ndikali {}".format(sapa,ulang))
+print("\nlist sapa : {}\ndikali {}".format(sapa, ulang))
 print(sapa*ulang)
-
-
-
-
-
-
-
-

@@ -1,0 +1,4 @@
+Mode read + line 1
+Mode read + line 2d2
+Mode append3
+Mode append4

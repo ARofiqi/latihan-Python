@@ -1,0 +1,1 @@
+print("Ini didalam __init__")

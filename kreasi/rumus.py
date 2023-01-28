@@ -1,12 +1,11 @@
-def rata_rata():
-    num = input("Masukan angka : ")
-    hasil = 0
-    r = []
-    for i in num:
-        if i == " ":continue
-        hasil += int(i)
-        r.append(int(i))
-    num.replace(" ","")
-    print(hasil//len(r))
+def rata_rata(list):
+    result = 0
+    for i in list:
+        result += i
+    result /= len(list)
+    return result
 
-rata_rata()
+
+nilai_matematika = [80, 77, 69, 70, 80, 97, 88, 56, 90, 95]
+mean_nilai = rata_rata(nilai_matematika)
+print(f"Nilai rata rata Matematika kelas 12 = {mean_nilai}")

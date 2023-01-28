@@ -1,17 +1,23 @@
-pesan = input("Masukan Pesannya : ").upper()
+ABJAD = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+ABJAD_REVERSE = ABJAD.copy()
+ABJAD_REVERSE.reverse()
 
-abjad = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-balik = abjad.copy()
-balik.reverse()
-def see_sandi(text):
-    def filter(x):
-        if x == " ":
-            return " "
-        else:
-            return balik[abjad.index(x)]
-    
-    t = list(map(filter,text))
-    return ''.join(t)
 
-sandi = see_sandi(pesan)
+def filter(word):
+    if word == " ":
+        return " "
+    else:
+        return ABJAD_REVERSE[ABJAD.index(word)]
+
+
+def get_pass(text):
+    row_sandi = list(map(filter, text))
+    result = ''.join(row_sandi)
+    return result
+
+
+massage = input("Masukan Pesannya : ")
+massage.upper()
+sandi = get_pass(massage)
 print(f"sandi saya = {sandi}")

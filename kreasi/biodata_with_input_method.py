@@ -1,14 +1,11 @@
-nama = input("Hallo, nama Kamu siapa : ")
-nim = int(input("emm... kalau NIM Kamu berapa :"))
-kelas = input("Kamu dari kelas apa : ")
-jurusan = input("Wahhh... Kita satu kelas dong...\nBtw Kamu ngambil jurusan apa :")
+nama = input("Masukan Nama : ")
+nim = input("Masukan NIM : ")
+kelas = input("Masukan Kelas : ")
+prodi = input("Masukan Prodi : ")
 
 
-print(f"""\n========= BiodataKu =========
-Nama    : {nama}
-NIM     : {nim}
-Jurusan : {jurusan.lower()}
-Kelas   : {kelas.upper()}
-
-
-""")
+print("========= BiodataKu =========")
+print(f"Nama    : {nama}")
+print(f"NIM     : {nim}")
+print(f"Prodi   : {prodi.lower()}")
+print(f"Kelas   : {kelas.upper()}")

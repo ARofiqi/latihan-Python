@@ -1,5 +1,7 @@
-# Ide ini saya dapatkan dari source code playground di solo learn
-# Jadi ini bukan ide saya seutuhnya
+"""
+Ide ini saya dapatkan dari source code playground di solo learn
+Jadi ini bukan ide saya seutuhnya
+"""
 
 pattern = {
     "a":"""

@@ -3,6 +3,7 @@ teman_teman = {
     "Andika":"Sipil",
     "abdullah":"matematika"
 }
+
 friends = teman_teman.copy()
 # print(teman_teman)
 # print(friends)

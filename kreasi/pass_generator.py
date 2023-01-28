@@ -1,15 +1,19 @@
-import random
-def pasw():
-    abjad = "qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
-    simbol = "@#$%^&*()-+|\{>}?<.,-_]`;:"
-    number = "1234567890"
-    huruf = abjad*2+simbol+number
-    new_pass = list(random.choice(huruf) for i in range(10))
-    return "".join(new_pass)
+import random as r
+
+def get_pass():
+    ABJAD = "qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
+    SIMBOL = "@#$%^&*()-+|\{>}?<.,-_]`;:"
+    NUMBER = "1234567890"
+
+    huruf = (ABJAD*3) + (SIMBOL) + (NUMBER)
+    new_pass = list(r.choice(huruf) for i in range(10))
+    hasil = "".join(new_pass)
+
+    return hasil
 
 while True:
-    sandi = pasw()
+    sandi = get_pass()
     print(sandi)
-    exit = input("\nLagi (y/n) : ")
-    if exit == 'n':
+    is_exit = input("\nLagi (y/n) : ")
+    if is_exit == 'n' or is_exit == 'N':
         break

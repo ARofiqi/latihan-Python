@@ -1,10 +1,11 @@
-print("="*10,"belajar if else","="*10)
-
 # if else statement
 # if kondisi : aksi
 
+print("="*10, " belajar if else ", "="*10)
+
 nama = "rofiqi"
-if nama == "rofiqi":print("hallo",nama)
+if nama == "rofiqi":
+    print("hallo", nama)
 
 # if and else
 
@@ -13,19 +14,18 @@ if nama == "rofiqi":print("hallo",nama)
 # else:
 #   aksi-false
 
-if nama=="rofiqi":
-    print("hallo",nama)
+nama = "rofiqi"
+if nama == "rofiqi":
+    print("hallo", nama)
 else:
     print("kamu siapa")
 
-
 # elif = else if
 
-x = input("masukan angka :")
-if int(x)%2==0:
+number = int(input("masukan angka :"))
+if number % 2 == 0:
     print("kamu memasukan angka genap")
-elif int(x)%2!=0:
+elif number % 2 != 0:
     print("kamu memasukan angka ganjil")
 else:
     print("harap masukan angka")
-
