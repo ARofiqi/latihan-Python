@@ -20,10 +20,10 @@ if __name__ == "__main__":
         print("SELAMAT DATANG DI PERPUSTAKAAN ROFIQI")
         print("DATABASE PERPUSTAKAAN")
         print("========================================")
-        print(f"1. Read Data")
-        print(f"2. Create Data")
-        print(f"3. Update Data")
-        print(f"4. Delete Data\n")
+        print("1. Read Data")
+        print("2. Create Data")
+        print("3. Update Data")
+        print("4. Delete Data\n")
 
         user_option = input("Masukan Opsi : ")
 

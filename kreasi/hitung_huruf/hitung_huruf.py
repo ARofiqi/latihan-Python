@@ -1,30 +1,31 @@
-with open("./kreasi/hitung_huruf/text.txt","r") as text:
-    txt = text.read()
+with open("./kreasi/hitung_huruf/text.txt","r") as file:
+    kalimat = file.read()
 
-    y = [i for i in txt]
-    y.sort()
+    list_huruf = list(map(lambda x: x,kalimat))
+    list_huruf.sort()
 
-    t = {}
+    kumpulan_teks = {}
 
-    abj_min, abj_max = [],[]
-    for i in y:
-        if i == " ":
-            t.update({"space":y.count(i)})
+    abjad_mininal =  []
+    abjad_maksimal = []
+    
+    for huruf in list_huruf:
+        if huruf == " ":
+            kumpulan_teks.update({"space":list_huruf.count(huruf)})
         else:
-            t.update({i:y.count(i)})
+            kumpulan_teks.update({huruf:list_huruf.count(huruf)})
 
 
-    jml_abj = [t[i] for i in t]
-    abj = [i for i in t]
+    jumlah_abjad = list(kumpulan_teks[i] for i in kumpulan_teks)
 
-    for i in t:
-        print(i,":",t[i])
-        if t[i] == 1:
-            abj_min.append(i)
-        if t[i] == max(jml_abj):
-            abj_max.append(i)
+    for teks in kumpulan_teks:
+        print(teks,":",kumpulan_teks[teks])
+        if kumpulan_teks[teks] == 1:
+            abjad_mininal.append(teks)
+        if kumpulan_teks[teks] == max(jumlah_abjad):
+            abjad_maksimal.append(teks)
 
 
     print("\n")
-    print("  ".join(abj_min),":",min(jml_abj))
-    print("  ".join(abj_max),":",max(jml_abj))
+    print("  ".join(abjad_mininal),":",min(jumlah_abjad))
+    print("  ".join(abjad_maksimal),":",max(jumlah_abjad))

@@ -1,4 +1,0 @@
-------------MATKUL DASAR PEMPROGRAMAN-------------
-+ belajar python
-+ belajar php
-+ belajar html, css, js
