@@ -1,3 +1,4 @@
 {
-  "python.analysis.extraPaths": ["./buat_package", "./buat_package"]
+  "python.analysis.extraPaths": ["./buat_package", "./buat_package"],
+  "python.analysis.typeCheckingMode": "basic"
 }

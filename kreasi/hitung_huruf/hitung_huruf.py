@@ -1,6 +1,10 @@
 with open("./kreasi/hitung_huruf/text.txt","r") as file:
     kalimat = file.read()
 
+    x = kalimat.split(" ")
+    istilah = 
+    print(x)
+
     list_huruf = list(map(lambda x: x,kalimat))
     list_huruf.sort()
 
