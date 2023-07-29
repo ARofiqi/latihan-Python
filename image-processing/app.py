@@ -24,6 +24,8 @@ i2 = cv2.imread(path_2)
 i3 = cv2.imread(path_3)
 i4 = cv2.imread(path_4)
 
+path_full = "./image-processing/Hasil.png"
+cv2.imwrite(path_full, img4)
 imgFull = cv2.vconcat([i1,i2,i3,i4])
 
 cv2.imshow("Gambar Lenna sebelum diubah", img)
