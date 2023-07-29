@@ -26,6 +26,8 @@ i4 = cv2.imread(path_4)
 
 imgFull = cv2.vconcat([i1,i2,i3,i4])
 
-cv2.imshow("Gambar Lenna", imgFull)
+cv2.imshow("Gambar Lenna sebelum diubah", img)
+cv2.waitKey(0)
+cv2.imshow("Gambar Lenna setelah diubah", imgFull)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
